@@ -35,6 +35,10 @@ class Admin extends CI_Controller {
 		session_destroy();
 		$this -> load -> view('login_view');
 	}
+	
+	public function register() {
+		$this->load->view('register');
+	}
 
 }
 ?>
