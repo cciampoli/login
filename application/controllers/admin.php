@@ -8,6 +8,11 @@ class Admin extends CI_Controller {
 		session_start();
 	}
 	
+	function index()
+	{
+		$this->load->view('login_view');
+	}
+	
 }
 
 ?>
