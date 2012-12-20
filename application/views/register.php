@@ -5,5 +5,6 @@
 </head>
 <body>
 	<h1>Register</h1>
+	<p>sample page</p>
 </body>
 </html>
