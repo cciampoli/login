@@ -67,15 +67,13 @@
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1>ChrisChross Login</h1>
 
 	<div id="body">
-		<?=$header;?>
-		My test
+		
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
+	<p class="footer">ChrisChross Spellbook</p>
 </div>
-<p>This is a test</p>
 </body>
 </html>
