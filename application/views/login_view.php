@@ -1,46 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-
-		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-		<title>login_view</title>
-		<meta name="description" content="" />
-		<meta name="author" content="Chris" />
-
-		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
-
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-	</head>
-
-	<body>
-		<div>
-			<header>
-				<h1>login_view</h1>
-			</header>
-			<nav>
-				<p>
-					<a href="/">Home</a>
-				</p>
-				<p>
-					<a href="/contact">Contact</a>
-				</p>
-			</nav>
-
-			<div>
-
-			</div>
-
-			<footer>
-				<p>
-					&copy; Copyright  by Chris
-				</p>
-			</footer>
-		</div>
-	</body>
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+<link rel="stylesheet" href="<?base_url();?>../css/styles.css">
+</head>
+<body>
+<div align="center">
+<h1>Login</h1>
+<table>
+<?php echo form_open('admin/login'); ?>
+<p><?=form_label('Email Address', 'email_address'); ?></p>
+<p><?=form_input('email_address', set_value('email_address'), 'id="email_address"'); ?></p>
+<p><?=form_label('Password', 'password'); ?></p>
+<p><?=form_password('password', '', 'id="password"'); ?></p>
+<p><?=form_submit('submit', 'Submit!'); ?></p>
+<?php echo form_close(); ?>
+<a href="<?=site_url('admin/register'); ?>">Not a registered user?  Click here to register now!</a>
+<div class="errors"><?=validation_errors(); ?></div>
+</table>
+</div>
+</body>
 </html>
