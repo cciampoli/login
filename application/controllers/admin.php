@@ -39,6 +39,7 @@ class Admin extends CI_Controller {
 	
 	public function register() {
 		// Set form validation rules
+		$this->form_validation->set_rules('first_name','First Name','required');
 		$this->load->view('register');
 	}
 
