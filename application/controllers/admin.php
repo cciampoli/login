@@ -5,6 +5,7 @@ class Admin extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		session_start();
+		$this -> load -> library('form_validation');
 	}
 
 	function index() {
@@ -12,8 +13,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function login() {
-		//echo sha1('12a12b');die();
-		$this -> load -> library('form_validation');
+		
 		$this -> form_validation -> set_rules('email_address', 'Email Address', 'required|valid_email');
 		$this -> form_validation -> set_rules('password', 'Password', 'required|min_length[4]');
 
@@ -37,6 +37,7 @@ class Admin extends CI_Controller {
 	}
 	
 	public function register() {
+		// Set form validation rules
 		$this->load->view('register');
 	}
 
