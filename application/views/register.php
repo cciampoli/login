@@ -81,7 +81,7 @@
 <p><?=form_password('password', '', 'id="password"'); ?></p>
 <p><?=form_submit('submit', 'Submit!'); ?></p>
 <?php echo form_close(); ?>
-<a href="<?=site_url('admin/register'); ?>">Not a registered user?  Click here to register now!</a>
+<a href="<?=site_url('admin'); ?>">Already a member?  Click here to login</a>
 <div class="errors"><?=validation_errors(); ?></div>
 </table>
 </div>
