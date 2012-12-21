@@ -76,7 +76,7 @@ $myArray = array(array(
 array(
 'Name:'=>'Steven',
 'Status:'=>'Active'));
-$json = file_get_content('test.json');
+$json = json_encode($myArray);
 
 
 $jsonIterator = new RecursiveIteratorIterator(
