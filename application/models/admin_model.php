@@ -13,6 +13,7 @@ class Admin_model extends CI_Model {
 				->db
 				->where('email_address',$email)
 				->where('password',sha1($password))
+				->where('status','active')
 				->limit(1)
 				->get('users');
 		if($q->num_rows() > 0){
