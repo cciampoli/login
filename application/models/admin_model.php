@@ -30,6 +30,7 @@ class Admin_model extends CI_Model {
 				->set('last_name',$last_name)
 				->set('email_address',$email_address)
 				->set('password',sha1($password))
+				->set('status','inactive')
 				->insert('users');
 	}	
 }
