@@ -68,7 +68,7 @@
 
 <div id="container">
 	<div align="center">
-<h1>Login</h1>
+<h1>Registration</h1>
 <table>
 <?php echo form_open('admin/register'); ?>
 <p><?=form_label('First Name', 'first_name'); ?></p>
