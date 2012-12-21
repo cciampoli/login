@@ -56,11 +56,10 @@ class Admin extends CI_Controller {
 						$this->input->post('password')
 					);
 			if($res!==FALSE){
-				$this->load->view('login_view');
+				redirect('admin');
 			}
-			$this->load->view('register');
 		}
-		
+		$this->load->view('register');
 	}
 
 }
