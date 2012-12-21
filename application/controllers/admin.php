@@ -45,9 +45,22 @@ class Admin extends CI_Controller {
 		
 		// Run rules and do something if they check out
 		if($this->form_validation->run() !== FALSE){
-			$this->load->view('login_view');
+			// Register the new user into the database, and currently set their account to inactive
+			$this->load->model('admin_model');
+			$res = $this
+					->admin_model
+					->register_user(
+						$this->input->post('first_name'),
+						$this->input->post('last_name'),
+						$this->input->post('email_address'),
+						$this->input->post('password')
+					);
+			if($res!==FALSE){
+				$this->load->view('admin');
+			}
+			$this->load->view('register');
 		}
-		$this->load->view('register');
+		
 	}
 
 }
