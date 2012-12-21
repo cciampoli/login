@@ -73,7 +73,7 @@
 	</style>
 </head>
 <body>
-<div id="header"><?=$header;?></div>
+<div id="header"><h1>ChrisChross Spellbook</h1></div>
 <div id="container">
 <div align="center">
 <h1>Login</h1>

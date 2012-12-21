@@ -9,8 +9,7 @@ class Admin extends CI_Controller {
 	}
 
 	function index() {
-		$data['header'] = 'ChrisChross Spellbook';
-		$this -> load -> view('login_view',$data);
+		$this -> load -> view('login_view');
 	}
 
 	public function login() {
