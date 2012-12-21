@@ -5,6 +5,9 @@
 </head>
 <body>
 	<h1>Register</h1>
-	<p>sample page</p>
+
+    <?=form_open('admin/register');?>
+    <?=form_close();?>
+    <p>sample page</p>
 </body>
 </html>
