@@ -72,8 +72,7 @@
 <?php
 $myArray = array(array(
 'Name:'=>'Chris',
-'Status:'=>'Wait'),
-array(
+'Status:'=>'Wait',
 'Name:'=>'Steven',
 'Status:'=>'Active'));
 $json = json_encode($myArray);
