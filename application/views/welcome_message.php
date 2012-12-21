@@ -70,9 +70,13 @@
 	<div align="center">
 <h1>Members Area</h1>
 <?php
-$json = json_encode(array(
-	'Names'=>'Chris','Mark','Jeff',
-	'Rank'=>'Sergeant','Monkey','Poopie'));
+$myArray = array(array(
+'Name:'=>'Chris',
+'Status:'=>'Wait'),
+array(
+'Name:'=>'Steven',
+'Status:'=>'Active'));
+$json = json_encode($myArray);
 
 
 $jsonIterator = new RecursiveIteratorIterator(
@@ -86,6 +90,8 @@ foreach ($jsonIterator as $key => $val) {
         echo "$key => $val\n";
     }
 }
+
+
 ?>
 </div>
 
