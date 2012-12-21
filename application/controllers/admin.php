@@ -43,6 +43,8 @@ class Admin extends CI_Controller {
 		$this->form_validation->set_rules('last_name','Last Name','required|max_length[40]');
 		$this->form_validation->set_rules('email_address','Email Address','required|valid_email');
 		$this->form_validation->set_rules('password','Password','required|min_length[4]');
+		
+		// Run rules and do something if they check out
 		if($this->form_validation->run() !== FALSE){
 			$this->load->view('login_view');
 		}
