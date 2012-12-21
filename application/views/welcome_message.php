@@ -70,7 +70,9 @@
 	<div align="center">
 <h1>Members Area</h1>
 <?php
-$json = json_encode(array('Names'=>'Chris','Mark','Jeff'));
+$json = json_encode(array(
+	'Names'=>'Chris','Mark','Jeff',
+	'Rank'=>'Sergeant','Monkey','Poopie'));
 
 
 $jsonIterator = new RecursiveIteratorIterator(
