@@ -78,7 +78,6 @@ array(
 'Status:'=>'Active'));
 $json = json_encode($myArray);
 
-
 $jsonIterator = new RecursiveIteratorIterator(
     new RecursiveArrayIterator(json_decode($json, TRUE)),
     RecursiveIteratorIterator::SELF_FIRST);
