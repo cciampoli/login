@@ -39,7 +39,10 @@ class Admin extends CI_Controller {
 	
 	public function register() {
 		// Set form validation rules
-		$this->form_validation->set_rules('first_name','First Name','required');
+		$this->form_validation->set_rules('first_name','First Name','required|max_length[40]');
+		$this->form_validation->set_rules('last_name','Last Name','required|max_length[40]');
+		$this->form_validation->set_rules('email_address','Email Address','required|valid_email');
+		$this->form_validation->set_rules('password','Password','required|min_length[4]');
 		if($this->form_validation->run() !== FALSE){
 			$this->load->view('login_view');
 		}
