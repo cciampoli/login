@@ -9,7 +9,7 @@
 <div id="header"><h1>ChrisChross Spellbook</h1></div>
 <div id="container">
 <div align="center">
-<h1>Login</h1>
+<h1>Login Test whats up</h1>
 <table>
 <?php echo form_open('admin/login'); ?>
 <p><?=form_label('Email Address', 'email_address'); ?></p>
