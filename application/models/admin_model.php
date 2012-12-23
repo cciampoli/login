@@ -22,7 +22,7 @@ class Admin_model extends CI_Model {
 		return false;
 	}
 	
-	public function register_user($first_name,$last_name,$email_address,$password)
+	public function register_user($first_name,$last_name,$email_address,$password,$key)
 	{
 		$q = $this
 				->db
@@ -30,6 +30,7 @@ class Admin_model extends CI_Model {
 				->set('last_name',$last_name)
 				->set('email_address',$email_address)
 				->set('password',sha1($password))
+				->set('key',$key)
 				->set('status','inactive')
 				->insert('users');
 	}	

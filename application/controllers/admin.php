@@ -51,15 +51,22 @@ class Admin extends CI_Controller {
 		if($this->form_validation->run() !== FALSE){
 			// Register the new user into the database, and currently set their account to inactive
 			$this->load->model('admin_model');
+			// Randomly generate a number to use as their activation key.  Send it to the model with the
+			// post values.
+			$random = rand(1122, 9999);
 			$res = $this
 					->admin_model
 					->register_user(
 						$this->input->post('first_name'),
 						$this->input->post('last_name'),
 						$this->input->post('email_address'),
-						$this->input->post('password')
+						$this->input->post('password'),
+						$random('key')
 					);
 			if($res!==FALSE){
+				// Send the user an email with the randomly generated number, and a link to where
+				// they can input it.  Once they input and submit the key (random value) their account
+				// will be set as active.
 				redirect('admin');
 			}
 		}
