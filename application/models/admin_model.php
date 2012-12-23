@@ -40,7 +40,7 @@ class Admin_model extends CI_Model {
 		$q = $this
 				->db
 				->set('status','active')
-				->where('key',$key)
+				->where('key',7005)
 				->update('users');
 	}	
 }
