@@ -78,7 +78,7 @@ class Admin extends CI_Controller {
 		$res = $this
 				->admin_model
 				->validate_user(
-					$this->input->get('key')
+					$this->input->post('key')
 				);
 		if($res!==FALSE){
 			redirect('admin');
