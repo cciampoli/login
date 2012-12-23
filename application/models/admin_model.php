@@ -35,12 +35,11 @@ class Admin_model extends CI_Model {
 				->insert('users');
 	}
 	
-	public function validate_user($first_name,$key)
+	public function validate_user($key)
 	{
 		$q = $this
 				->db
 				->set('status','active')
-				->where('first_name',$first_name)
 				->where('key',$key)
 				->update('users');
 	}	
