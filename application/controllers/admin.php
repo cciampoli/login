@@ -61,7 +61,7 @@ class Admin extends CI_Controller {
 						$this->input->post('last_name'),
 						$this->input->post('email_address'),
 						$this->input->post('password'),
-						$random('key')
+						$random
 					);
 			if($res!==FALSE){
 				// Send the user an email with the randomly generated number, and a link to where
