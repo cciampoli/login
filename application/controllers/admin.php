@@ -73,5 +73,20 @@ class Admin extends CI_Controller {
 		$this->load->view('register');
 	}
 
+	public function validate() {
+		$this->load->model('admin_model');
+		$res = $this
+				->admin_model
+				->validate_user(
+					$this->input->get('email_address'),
+					$this->input->get('key')
+				);
+		if($res!==FALSE){
+			redirect('admin');
+		} else {
+			$this->load->view('sorry');
+		}
+	}
+
 }
 ?>
