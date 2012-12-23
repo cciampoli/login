@@ -14,17 +14,21 @@ class Admin extends CI_Controller {
 
 	public function login() {
 		
-		$this -> form_validation -> set_rules('email_address', 'Email Address', 'required|valid_email');
+		$this -> form_validation ->set_rules('email_address', 'Email Address', 'required|valid_email');
 		$this -> form_validation -> set_rules('password', 'Password', 'required|min_length[4]');
 
 		if ($this -> form_validation -> run() !== FALSE) {
 			// Then query the DB because the form was filled out correctly
-			$this -> load -> model('admin_model');
-			$res = $this -> admin_model -> verify_user($this -> input -> post('email_address'), $this -> input -> post('password'));
+			$this->load->model('admin_model');
+			$res = $this
+					->admin_model 
+					->verify_user(
+						$this->input->post('email_address'), 
+						$this->input->post('password'));
 			if ($res !== FALSE) {
 				// Person has account
-				$_SESSION['username'] = $this -> input -> post('email_address');
-				$_SESSION['user_id'] = $res -> id;
+				$_SESSION['username'] = $this->input->post('email_address');
+				$_SESSION['user_id'] = $res->id;
 				redirect('welcome');
 			}
 		}

@@ -75,7 +75,10 @@ $myArray = array(array(
 'Status:'=>'Wait'),
 array(
 'Name:'=>'Steven',
-'Status:'=>'Active'));
+'Status:'=>'Active'),
+array(
+'Name:'=>'Donald',
+'Status:'=>'Wait');
 $json = json_encode($myArray);
 
 $jsonIterator = new RecursiveIteratorIterator(
