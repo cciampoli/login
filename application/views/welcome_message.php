@@ -70,13 +70,14 @@
 	<div align="center">
 <h1>Members Area</h1>
 <?php
-$myArray = array(array(
+$myArray = array(
+array=>'Chris'(
 'Name:'=>'Chris',
 'Status:'=>'Wait'),
-array(
+array=>'Steven'(
 'Name:'=>'Steven',
 'Status:'=>'Active'),
-array(
+array=>'Donald'(
 'Name:'=>'Donald',
 'Status:'=>'Wait');
 $json = json_encode($myArray);
