@@ -71,13 +71,13 @@
 <h1>Members Area</h1>
 <?php
 $myArray = array(
-array=>'Chris'(
+array(
 'Name:'=>'Chris',
 'Status:'=>'Wait'),
-array=>'Steven'(
+array(
 'Name:'=>'Steven',
 'Status:'=>'Active'),
-array=>'Donald'(
+array(
 'Name:'=>'Donald',
 'Status:'=>'Wait');
 $json = json_encode($myArray);
