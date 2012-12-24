@@ -66,7 +66,9 @@ class Admin extends CI_Controller {
 			if($res!==FALSE){
 				// Send the user an email with the randomly generated number, and a link to where
 				// they can input it.  Once they input and submit the key (random value) their account
-				// will be set as active.
+				// will be set as active.  The other idea I have for this is to instead send an email
+				// with a premade link with the email and key already input.  Once they click the link
+				// it will run the validate function.
 				redirect('admin');
 			}
 		}
