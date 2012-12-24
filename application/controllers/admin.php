@@ -86,10 +86,5 @@ class Admin extends CI_Controller {
 			$this->load->view('sorry');
 		}
 	}
-	
-	public function test($name){
-		echo $name . '<br/>';
-	}
-
 }
 ?>
