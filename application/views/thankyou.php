@@ -21,19 +21,9 @@
 	<body>
 		<div>
 			<header>
-				<h1>thankyou</h1>
+				<h1>Thank you for validating your registration!</h1>
 			</header>
-			<nav>
-				<p>
-					<a href="/">Home</a>
-				</p>
-				<p>
-					<a href="/contact">Contact</a>
-				</p>
-			</nav>
-
-			<div>
-
+			
 			</div>
 
 			<footer>

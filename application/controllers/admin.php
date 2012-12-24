@@ -81,7 +81,7 @@ class Admin extends CI_Controller {
 					$this->input->post('key')
 				);
 		if($res!==FALSE){
-			redirect('admin');
+			$this->load->view('thankyou');
 		} else {
 			$this->load->view('sorry');
 		}
