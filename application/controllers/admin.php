@@ -73,12 +73,12 @@ class Admin extends CI_Controller {
 		$this->load->view('register');
 	}
 
-	public function validate() {
+	public function validate($key) {
 		$this->load->model('admin_model');
 		$res = $this
 				->admin_model
 				->validate_user(
-					$this->input->post('key')
+					$key
 				);
 		if($res!==FALSE){
 			$this->load->view('thankyou');
