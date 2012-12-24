@@ -16,6 +16,7 @@
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/css/styles.css">
 	</head>
 
 	<body>
@@ -23,7 +24,7 @@
 			<header>
 				<h1>Thank you for validating your registration!</h1>
 			</header>
-			
+			<a href="<?=site_url('admin'); ?>">Click here to login</a>
 			</div>
 
 			<footer>

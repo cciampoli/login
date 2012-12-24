@@ -82,9 +82,8 @@ class Admin extends CI_Controller {
 				);
 		if($res!==FALSE){
 			$this->load->view('thankyou');
-		} else {
+		} 
 			$this->load->view('sorry');
-		}
 	}
 	
 	public function test($name){
