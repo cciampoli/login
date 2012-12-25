@@ -70,9 +70,9 @@ class Admin extends CI_Controller {
 				$this->load->library('email');
 				$this->email->from('admin@spellbook.orchestra.io', 'Validation Imp');
 				$this->email->to($this->input->post('email_address'));
-				$this->email->subject('A new user has signed-up with spellbook');
-				$this->email->message('A new user has signed-up with spellbook, and needs to be activatd.
-									   Please use this ' . $random . 'key to activate.');	
+				$this->email->subject('Thank you for registering with spellbook');
+				$this->email->message('Thank you for registering with spellbook, you will need to' . '<br/>' .
+									   'use this key ' . $random . ' to activate.');	
 				$this->email->send();
 
 				// will be set as active.  The other idea I have for this is to instead send an email
