@@ -67,6 +67,12 @@ class Admin extends CI_Controller {
 				// Send the user an email with the randomly generated number, and a link to where
 				// they can input it.  Once they input and submit the key (random value) their account
 				// will be set as active.
+				$this->load->library('email');
+				$this->email->from('chris@spellbook.com', 'Your Name');
+				$this->email->to('chrisciampoli@gmail.com');
+				$this->email->subject('Email Test');
+				$this->email->message('Testing the email class.');	
+				$this->email->send();
 				redirect('admin');
 			}
 		}
