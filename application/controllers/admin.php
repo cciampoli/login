@@ -68,10 +68,11 @@ class Admin extends CI_Controller {
 				// they can input it.  Once they input and submit the key (random value) their account
 				// will be set as active.
 				$this->load->library('email');
-				$this->email->from('chris@spellbook.com', 'Your Name');
+				$this->email->from('admin@spellbook.orchestra.io', 'Validation Imp');
 				$this->email->to('chrisciampoli@gmail.com');
-				$this->email->subject('Email Test');
-				$this->email->message('Testing the email class.');	
+				$this->email->subject('A new user has signed-up with spellbook');
+				$this->email->message('A new user has signed-up with spellbook, and needs to be activatd.
+									   Please use this ' . $random . 'key to activate.');	
 				$this->email->send();
 
 				// will be set as active.  The other idea I have for this is to instead send an email
