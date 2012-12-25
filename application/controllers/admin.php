@@ -69,7 +69,7 @@ class Admin extends CI_Controller {
 				// will be set as active.
 				$this->load->library('email');
 				$this->email->from('admin@spellbook.orchestra.io', 'Validation Imp');
-				$this->email->to('chrisciampoli@gmail.com');
+				$this->email->to($this->input->post('email_address'));
 				$this->email->subject('A new user has signed-up with spellbook');
 				$this->email->message('A new user has signed-up with spellbook, and needs to be activatd.
 									   Please use this ' . $random . 'key to activate.');	
