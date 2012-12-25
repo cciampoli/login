@@ -16,24 +16,15 @@
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/css/styles.css">
 	</head>
 
 	<body>
 		<div>
 			<header>
-				<h1>thankyou</h1>
+				<h1>Thank you for validating your registration!</h1>
 			</header>
-			<nav>
-				<p>
-					<a href="/">Home</a>
-				</p>
-				<p>
-					<a href="/contact">Contact</a>
-				</p>
-			</nav>
-
-			<div>
-
+			<a href="<?=site_url('admin'); ?>">Click here to login</a>
 			</div>
 
 			<footer>

@@ -73,29 +73,28 @@ class Admin extends CI_Controller {
 				$this->email->subject('Email Test');
 				$this->email->message('Testing the email class.');	
 				$this->email->send();
+
+				// will be set as active.  The other idea I have for this is to instead send an email
+				// with a premade link with the email and key already input.  Once they click the link
+				// it will run the validate function
 				redirect('admin');
 			}
 		}
 		$this->load->view('register');
 	}
 
-	public function validate() {
+	public function validate($key) {
 		$this->load->model('admin_model');
 		$res = $this
 				->admin_model
 				->validate_user(
-					$this->input->post('key')
+					$key
 				);
 		if($res!==FALSE){
-			redirect('admin');
+			$this->load->view('thankyou');
 		} else {
 			$this->load->view('sorry');
 		}
 	}
-	
-	public function test($name){
-		echo $name . '<br/>';
-	}
-
 }
 ?>
